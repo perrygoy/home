@@ -1,3 +1,4 @@
+# QOL commands
 insta () {
   docker run --rm -it $1 /bin/bash || docker run --rm -it $1 /bin/sh
 }
@@ -18,10 +19,8 @@ deactivate_cfg() {
      mv ~/.pydistutils.cfg ~/.inactive_pydistutils.cfg
 }
 
+# Prompt
 export PS1="[\t] \u \[\033[32m\]\W\[\033[34m\]\$(parse_git_branch)\[\033[00m\] $ "
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/pgoy/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/pgoy/Downloads/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/pgoy/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/pgoy/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+# Additional, workspace-specific functions
+source .funcs
