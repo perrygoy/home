@@ -1,3 +1,5 @@
 *
 !.gitignore
 !.bash_profile
+!.pydistutils.cfg
+
