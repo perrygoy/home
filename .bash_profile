@@ -23,4 +23,4 @@ deactivate_cfg() {
 export PS1="[\t] \u \[\033[32m\]\W\[\033[34m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # Additional, workspace-specific functions
-. .funcs
+. ~/.funcs
