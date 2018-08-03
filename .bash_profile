@@ -22,6 +22,9 @@ deactivate_cfg() {
 # Prompt
 export PS1="[\t] \u \[\033[32m\]\W\[\033[34m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+# Aliases
+alias tags="git tag -l --format=\"%(creatordate:short)|%(refname:short)\" | sort -r"
+
 # Additional, workspace-specific functions
 . ~/.funcs
 . ~/.dotfiles/.git-completion.bash
